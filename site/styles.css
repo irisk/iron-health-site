@@ -565,6 +565,82 @@ strong {
     font-size: 0.9rem !important;
 }
 
+/* ==================== RESOURCES ==================== */
+.resources-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    margin-top: 2rem;
+}
+
+@media (min-width: 600px) {
+    .resources-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.resource-card {
+    background: white;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    border-top: 3px solid var(--color-warm-grey);
+    display: flex;
+    flex-direction: column;
+}
+
+.resource-listen {
+    border-top-color: var(--color-green);
+}
+
+.resource-science {
+    border-top-color: #5B7BA5;
+}
+
+.resource-medical {
+    border-top-color: var(--color-rust);
+}
+
+.resource-guideline {
+    border-top-color: var(--color-amber);
+}
+
+.resource-type {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--color-warm-grey);
+    margin-bottom: 0.5rem;
+}
+
+.resource-card h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+}
+
+.resource-card h3 a {
+    color: var(--color-dark);
+    text-decoration: none;
+}
+
+.resource-card h3 a:hover {
+    color: var(--color-rust);
+    text-decoration: underline;
+}
+
+.resource-card p {
+    font-size: 0.9rem;
+    color: var(--color-dark-soft);
+    margin-bottom: 0.75rem;
+    flex: 1;
+}
+
+.resource-meta {
+    font-size: 0.75rem;
+    color: var(--color-warm-grey);
+    font-weight: 500;
+}
+
 /* ==================== FOOTER ==================== */
 .footer {
     background: var(--color-dark);
@@ -587,10 +663,6 @@ strong {
     margin-bottom: 1.5rem;
     padding-bottom: 1.5rem;
     border-bottom: 1px solid rgba(255,255,255,0.1);
-}
-
-.footer-links {
-    margin-bottom: 1rem;
 }
 
 .footer-credit p {
