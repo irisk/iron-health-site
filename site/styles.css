@@ -1,0 +1,648 @@
+/* ==================== VARIABLES ==================== */
+:root {
+    --color-rust: #C4553A;
+    --color-rust-light: #D4756A;
+    --color-rust-dark: #A3432D;
+    --color-cream: #FFF8F0;
+    --color-cream-dark: #F5EDDF;
+    --color-dark: #2D2926;
+    --color-dark-soft: #4A4340;
+    --color-warm-grey: #8A7E7A;
+    --color-green: #5B8A5E;
+    --color-green-light: #E8F0E8;
+    --color-amber: #D4A24E;
+    --font-main: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --max-width: 800px;
+    --section-padding: 5rem 1.5rem;
+}
+
+/* ==================== RESET & BASE ==================== */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: var(--font-main);
+    color: var(--color-dark);
+    background-color: var(--color-cream);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ==================== LANGUAGE TOGGLE ==================== */
+/* Dutch visible by default, English hidden */
+[lang="en"] {
+    display: none;
+}
+
+body.lang-en [lang="en"] {
+    display: inline;
+}
+
+body.lang-en [lang="nl"] {
+    display: none;
+}
+
+/* Keep toggle button text always visible */
+.lang-toggle [lang="en"],
+.lang-toggle [lang="nl"] {
+    display: inline;
+}
+
+body.lang-en .lang-toggle [lang="nl"] {
+    display: inline;
+}
+
+body.lang-en .lang-toggle [lang="en"] {
+    display: none;
+}
+
+.lang-toggle {
+    position: fixed;
+    top: 1.25rem;
+    right: 1.25rem;
+    z-index: 100;
+    background: var(--color-dark);
+    color: var(--color-cream);
+    border: none;
+    border-radius: 2rem;
+    padding: 0.5rem 1.1rem;
+    font-family: var(--font-main);
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    letter-spacing: 0.05em;
+    transition: background 0.2s ease, transform 0.2s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.lang-toggle:hover {
+    background: var(--color-dark-soft);
+    transform: scale(1.05);
+}
+
+/* ==================== LAYOUT ==================== */
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.section {
+    padding: var(--section-padding);
+}
+
+.section-alt {
+    background-color: var(--color-cream-dark);
+}
+
+/* ==================== TYPOGRAPHY ==================== */
+h1 {
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.25rem;
+}
+
+h2 {
+    font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    margin-bottom: 1rem;
+    color: var(--color-rust-dark);
+}
+
+h3 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--color-dark);
+}
+
+p {
+    margin-bottom: 1rem;
+    color: var(--color-dark-soft);
+}
+
+strong {
+    color: var(--color-dark);
+}
+
+/* ==================== HERO ==================== */
+.hero {
+    padding: 8rem 1.5rem 5rem;
+    background: linear-gradient(135deg, var(--color-cream) 0%, var(--color-cream-dark) 100%);
+    text-align: center;
+}
+
+.hero h1 {
+    color: var(--color-rust-dark);
+}
+
+.hero-sub {
+    font-size: 1.15rem;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    color: var(--color-dark-soft);
+}
+
+.cta-button {
+    display: inline-block;
+    background: var(--color-rust);
+    color: white;
+    text-decoration: none;
+    padding: 0.9rem 2rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    font-size: 1.05rem;
+    transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.cta-button:hover {
+    background: var(--color-rust-dark);
+    transform: translateY(-1px);
+}
+
+/* ==================== FERRITIN SCALE ==================== */
+.ferritin-scale {
+    margin: 2.5rem 0;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+
+.scale-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    color: var(--color-warm-grey);
+    margin-bottom: 0.5rem;
+    padding: 0 0.25rem;
+}
+
+.scale-bar {
+    display: flex;
+    height: 2.5rem;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+.scale-zone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: white;
+}
+
+.zone-low {
+    background: var(--color-rust);
+}
+
+.zone-grey {
+    background: var(--color-warm-grey);
+}
+
+.zone-optimal {
+    background: var(--color-green);
+}
+
+.zone-good {
+    background: #9BC49D;
+}
+
+.scale-annotations {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.annotation {
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+}
+
+.annotation-lab {
+    background: #E8E0DA;
+    color: var(--color-dark-soft);
+}
+
+.annotation-optimal {
+    background: var(--color-green-light);
+    color: var(--color-green);
+}
+
+/* ==================== INSIGHT BOX ==================== */
+.insight-box {
+    background: white;
+    border-left: 4px solid var(--color-rust);
+    padding: 1.25rem 1.5rem;
+    border-radius: 0 0.5rem 0.5rem 0;
+    margin-top: 1.5rem;
+}
+
+.insight-box p {
+    margin-bottom: 0;
+}
+
+/* ==================== HEMOGLOBIN EXAMPLE ==================== */
+.hb-example {
+    background: white;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    margin: 2rem 0;
+}
+
+.hb-example-header {
+    background: var(--color-rust);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.hb-example-body {
+    padding: 2rem 1.5rem 1rem;
+}
+
+.hb-bar {
+    position: relative;
+    height: 2.5rem;
+    background: linear-gradient(to right, var(--color-rust-light) 0%, #e8d5a0 50%, var(--color-green) 100%);
+    border-radius: 0.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.hb-range-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.hb-marker {
+    position: absolute;
+    top: -0.5rem;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.hb-label {
+    display: block;
+    background: var(--color-dark);
+    color: white;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.hb-marker-personal .hb-label {
+    background: var(--color-green);
+}
+
+.hb-marker-dropped .hb-label {
+    background: var(--color-rust);
+}
+
+.hb-desc {
+    display: block;
+    font-size: 0.7rem;
+    color: var(--color-dark-soft);
+    margin-top: 0.25rem;
+    white-space: nowrap;
+}
+
+.hb-range-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    color: var(--color-warm-grey);
+    margin-top: 2.5rem;
+}
+
+.hb-example-text {
+    padding: 1rem 1.5rem;
+    font-size: 0.95rem;
+    border-top: 1px solid var(--color-cream-dark);
+    margin-bottom: 0;
+}
+
+/* ==================== PODCAST CALLOUT ==================== */
+.podcast-callout {
+    border-left-color: var(--color-green);
+    background: var(--color-green-light);
+}
+
+.podcast-callout a {
+    color: var(--color-rust-dark);
+    font-weight: 500;
+}
+
+.podcast-callout a:hover {
+    color: var(--color-rust);
+}
+
+/* ==================== FOOTER LINKS ==================== */
+.footer a {
+    color: var(--color-rust-light);
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: var(--color-cream);
+    text-decoration: underline;
+}
+
+/* ==================== CHECKLIST ==================== */
+.checklist {
+    display: grid;
+    gap: 0.75rem;
+    margin: 2rem 0;
+}
+
+.check-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 1.25rem;
+    background: white;
+    border-radius: 0.75rem;
+    cursor: pointer;
+    transition: box-shadow 0.2s ease;
+    user-select: none;
+}
+
+.check-item:hover {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.check-item input[type="checkbox"] {
+    display: none;
+}
+
+.checkmark {
+    flex-shrink: 0;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 2px solid var(--color-warm-grey);
+    border-radius: 0.375rem;
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.check-item input:checked ~ .checkmark {
+    background: var(--color-rust);
+    border-color: var(--color-rust);
+}
+
+.check-item input:checked ~ .checkmark::after {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 7px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.check-item input:checked ~ .check-text {
+    color: var(--color-dark);
+}
+
+.check-text {
+    font-size: 1rem;
+    color: var(--color-dark-soft);
+    transition: color 0.2s ease;
+}
+
+.checklist-note {
+    text-align: center;
+    font-weight: 500;
+    color: var(--color-rust-dark);
+    margin-top: 1rem;
+}
+
+/* ==================== RISK CARDS ==================== */
+.risk-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    margin: 2rem 0;
+}
+
+@media (min-width: 600px) {
+    .risk-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.risk-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.risk-icon {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+}
+
+.risk-card h3 {
+    color: var(--color-rust-dark);
+}
+
+.risk-card p {
+    font-size: 0.95rem;
+    margin-bottom: 0;
+}
+
+/* ==================== BLOCKER TABLE ==================== */
+.blocker-table-wrapper {
+    margin: 2rem 0;
+    overflow-x: auto;
+}
+
+.blocker-table {
+    width: 100%;
+    background: white;
+    border-radius: 1rem;
+    overflow: hidden;
+    border-collapse: collapse;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.blocker-table thead {
+    background: var(--color-rust);
+    color: white;
+}
+
+.blocker-table th {
+    padding: 1rem 1.5rem;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.blocker-table td {
+    padding: 0.9rem 1.5rem;
+    border-bottom: 1px solid var(--color-cream-dark);
+    font-size: 0.95rem;
+}
+
+.blocker-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.blocker-table tbody tr:hover {
+    background: var(--color-cream);
+}
+
+/* ==================== ACTION STEPS ==================== */
+.steps {
+    display: grid;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.step {
+    display: flex;
+    gap: 1.25rem;
+    align-items: flex-start;
+}
+
+.step-number {
+    flex-shrink: 0;
+    width: 3rem;
+    height: 3rem;
+    background: var(--color-rust);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.step-content {
+    flex: 1;
+}
+
+.step-content h3 {
+    font-size: 1.1rem;
+}
+
+.step-content p {
+    font-size: 0.95rem;
+}
+
+.step-tip {
+    background: var(--color-cream-dark);
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 0.9rem !important;
+}
+
+/* ==================== FOOTER ==================== */
+.footer {
+    background: var(--color-dark);
+    color: var(--color-warm-grey);
+    padding: 3rem 1.5rem;
+    text-align: center;
+}
+
+.footer p {
+    color: var(--color-warm-grey);
+    font-size: 0.85rem;
+    margin-bottom: 0.75rem;
+}
+
+.footer strong {
+    color: var(--color-cream);
+}
+
+.disclaimer {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.footer-links {
+    margin-bottom: 1rem;
+}
+
+.footer-credit p {
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.4);
+    margin-bottom: 0;
+}
+
+/* ==================== SCROLL ANIMATIONS ==================== */
+.section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hero is always visible */
+.hero {
+    opacity: 1;
+    transform: none;
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 480px) {
+    :root {
+        --section-padding: 3.5rem 1rem;
+    }
+
+    .hero {
+        padding: 6rem 1rem 3.5rem;
+    }
+
+    .step {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .scale-labels {
+        font-size: 0.65rem;
+    }
+
+    .scale-zone {
+        font-size: 0.6rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .checklist {
+        grid-template-columns: 1fr 1fr;
+    }
+}

@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IJzertekort — Moe? Het kan aan je ijzer liggen.</title>
+    <meta name="description" content="Veel Nederlandse vrouwen hebben een ijzertekort zonder het te weten. Leer waarom 'normaal' niet altijd gezond betekent.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Language Toggle -->
+    <button class="lang-toggle" id="langToggle" aria-label="Switch language">
+        <span lang="nl">EN</span>
+        <span lang="en">NL</span>
+    </button>
+
+    <!-- ==================== HERO ==================== -->
+    <section class="hero" id="top">
+        <div class="container">
+            <h1>
+                <span lang="nl">Moe? Het kan aan je ijzer liggen.</span>
+                <span lang="en">Tired? It might be your iron.</span>
+            </h1>
+            <p class="hero-sub">
+                <span lang="nl">Veel Nederlandse vrouwen hebben een ijzertekort zonder het te weten. Hun bloedwaarden zijn 'normaal' — maar verre van optimaal.</span>
+                <span lang="en">Many Dutch women are iron deficient without knowing it. Their blood values are "normal" — but far from optimal.</span>
+            </p>
+            <a href="#action" class="cta-button">
+                <span lang="nl">Wat kan ik doen?</span>
+                <span lang="en">What can I do?</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- ==================== THE PROBLEM ==================== -->
+    <section class="section" id="problem">
+        <div class="container">
+            <h2>
+                <span lang="nl">"Normaal" ≠ Gezond</span>
+                <span lang="en">"Normal" ≠ Healthy</span>
+            </h2>
+            <p>
+                <span lang="nl">Als je arts zegt dat je bloedwaarden "normaal" zijn, betekent dat niet automatisch dat je je goed hoort te voelen. De laboratoriumwaarden voor ferritine (je ijzervoorraad) zijn gebaseerd op verouderde referentiewaarden — niet op wat optimaal is voor je gezondheid. Die oude grenswaarden worden nu bijgesteld: ziekenhuizen zoals OLVG Amsterdam en Isala Zwolle hanteren sinds 2024 een ondergrens van 30 µg/L in plaats van de oude 6-15 µg/L.</span>
+                <span lang="en">When your doctor says your blood values are "normal," that doesn't automatically mean you should feel good. Lab reference ranges for ferritin (your iron stores) are based on outdated thresholds — not on what's optimal for your health. Those old values are being updated: hospitals like OLVG Amsterdam and Isala Zwolle have adopted a lower limit of 30 µg/L since 2024, replacing the old 6-15 µg/L.</span>
+            </p>
+
+            <!-- Ferritin Scale Visual -->
+            <div class="ferritin-scale">
+                <div class="scale-labels">
+                    <span>0</span>
+                    <span>15</span>
+                    <span>30</span>
+                    <span>50</span>
+                    <span>70</span>
+                    <span>100 µg/L</span>
+                </div>
+                <div class="scale-bar">
+                    <div class="scale-zone zone-low" style="width: 15%;">
+                        <span lang="nl">Te laag</span>
+                        <span lang="en">Too low</span>
+                    </div>
+                    <div class="scale-zone zone-grey" style="width: 15%;">
+                        <span lang="nl">"Normaal"</span>
+                        <span lang="en">"Normal"</span>
+                    </div>
+                    <div class="scale-zone zone-optimal" style="width: 40%;">
+                        <span lang="nl">Optimaal</span>
+                        <span lang="en">Optimal</span>
+                    </div>
+                    <div class="scale-zone zone-good" style="width: 30%;"></div>
+                </div>
+                <div class="scale-annotations">
+                    <div class="annotation annotation-lab">
+                        <span lang="nl">Lab "normaal": 6-15 µg/L</span>
+                        <span lang="en">Lab "normal": 6-15 µg/L</span>
+                    </div>
+                    <div class="annotation annotation-optimal">
+                        <span lang="nl">Optimaal: 30-70 µg/L</span>
+                        <span lang="en">Optimal: 30-70 µg/L</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="insight-box">
+                <p>
+                    <span lang="nl"><strong>Het inzicht:</strong> Je kunt een ferritine van 12 µg/L hebben — "normaal" volgens het lab — en toch last hebben van vermoeidheid, haarverlies en concentratieproblemen. Met een ferritine van 30+ µg/L voel je je waarschijnlijk een stuk beter. Toen Isala Zwolle de grens verhoogde naar 30 µg/L, werden er <strong>30% meer</strong> diagnoses gesteld.</span>
+                    <span lang="en"><strong>The insight:</strong> You can have a ferritin of 12 µg/L — "normal" according to the lab — and still suffer from fatigue, hair loss, and concentration problems. At a ferritin of 30+ µg/L, you'd likely feel significantly better. When Isala Zwolle raised their threshold to 30 µg/L, they diagnosed <strong>30% more</strong> cases of iron deficiency.</span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== PERSONAL HEMOGLOBIN ==================== -->
+    <section class="section section-alt" id="hemoglobin">
+        <div class="container">
+            <h2>
+                <span lang="nl">Jouw hemoglobine is persoonlijk</span>
+                <span lang="en">Your hemoglobin is personal</span>
+            </h2>
+            <p>
+                <span lang="nl">Er is nog een probleem: hemoglobine (Hb) wordt beoordeeld op basis van één ondergrens voor alle vrouwen. Maar onderzoek toont aan dat ieder persoon een eigen, stabiel Hb-niveau heeft — je persoonlijke "setpoint."</span>
+                <span lang="en">There's another problem: hemoglobin (Hb) is judged against a single lower limit for all women. But research shows that every person has their own stable Hb level — your personal "setpoint."</span>
+            </p>
+            <p>
+                <span lang="nl">Een studie van 12.407 gezonde mensen over 20 jaar (gepubliceerd in <em>Nature</em>, 2025) laat zien: je Hb schommelt maar ~2,8% binnen jezelf, terwijl de variatie tussen mensen ~6,6% is. Dat betekent dat het "normale" bereik veel te breed is om een individuele daling te signaleren.</span>
+                <span lang="en">A study of 12,407 healthy people over 20 years (published in <em>Nature</em>, 2025) shows: your Hb only fluctuates ~2.8% within yourself, while variation between people is ~6.6%. This means the "normal" range is far too broad to flag an individual decline.</span>
+            </p>
+
+            <div class="hb-example">
+                <div class="hb-example-header">
+                    <span lang="nl">Voorbeeld</span>
+                    <span lang="en">Example</span>
+                </div>
+                <div class="hb-example-body">
+                    <div class="hb-bar">
+                        <div class="hb-marker hb-marker-personal" style="left: 80%;">
+                            <span class="hb-label">8,7</span>
+                            <span class="hb-desc">
+                                <span lang="nl">Jouw setpoint</span>
+                                <span lang="en">Your setpoint</span>
+                            </span>
+                        </div>
+                        <div class="hb-marker hb-marker-dropped" style="left: 33%;">
+                            <span class="hb-label">7,7</span>
+                            <span class="hb-desc">
+                                <span lang="nl">"Normaal" maar niet jouw normaal</span>
+                                <span lang="en">"Normal" but not your normal</span>
+                            </span>
+                        </div>
+                        <div class="hb-range-line"></div>
+                    </div>
+                    <div class="hb-range-labels">
+                        <span>7,5</span>
+                        <span>
+                            <span lang="nl">Lab "normaal" bereik</span>
+                            <span lang="en">Lab "normal" range</span>
+                        </span>
+                        <span>10,0 mmol/L</span>
+                    </div>
+                </div>
+                <p class="hb-example-text">
+                    <span lang="nl">Als jouw persoonlijke Hb normaal 8,7 mmol/L is, dan is een daling naar 7,7 een verschil van meer dan 11% — vier keer je normale schommeling. Je voelt je beroerd, maar je arts zegt: "het is normaal."</span>
+                    <span lang="en">If your personal Hb is normally 8.7 mmol/L, a drop to 7.7 is a difference of over 11% — four times your normal fluctuation. You feel terrible, but your doctor says: "it's normal."</span>
+                </p>
+            </div>
+
+            <div class="insight-box podcast-callout">
+                <p>
+                    <span lang="nl"><strong>🎧 Luistertip:</strong> In de <a href="https://open.spotify.com/episode/2NefFbyG4ytpBOVh7FFAbC" target="_blank" rel="noopener">Huisarts Podcast — IJzergebrek</a> leggen internisten Hilde Roijen en Marlijn Hoeks uit waarom de oude ferritinewaarden achterhaald zijn en waarom 30 µg/L de nieuwe ondergrens moet zijn. Ze introduceren ook het concept van je persoonlijke Hb-setpoint.</span>
+                    <span lang="en"><strong>🎧 Listen:</strong> In the <a href="https://open.spotify.com/episode/2NefFbyG4ytpBOVh7FFAbC" target="_blank" rel="noopener">Huisarts Podcast — Iron Deficiency</a>, internists Hilde Roijen and Marlijn Hoeks explain why old ferritin values are outdated and why 30 µg/L should be the new minimum. They also introduce the concept of your personal Hb setpoint.</span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SYMPTOMS ==================== -->
+    <section class="section" id="symptoms">
+        <div class="container">
+            <h2>
+                <span lang="nl">Herken je dit?</span>
+                <span lang="en">Do you recognize this?</span>
+            </h2>
+            <p>
+                <span lang="nl">Een laag ferritine kan allerlei klachten veroorzaken — ook als je technisch geen bloedarmoede hebt. Vink aan wat je herkent:</span>
+                <span lang="en">Low ferritin can cause a range of symptoms — even without anemia. Check what applies to you:</span>
+            </p>
+
+            <div class="checklist">
+                <label class="check-item">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                    <span class="check-text">
+                        <span lang="nl">Moe, ook na voldoende slaap</span>
+                        <span lang="en">Tired, even after enough sleep</span>
+                    </span>
+                </label>
+                <label class="check-item">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                    <span class="check-text">
+                        <span lang="nl">Brain fog — moeite met concentreren</span>
+                        <span lang="en">Brain fog — difficulty concentrating</span>
+                    </span>
+                </label>
+                <label class="check-item">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                    <span class="check-text">
+                        <span lang="nl">Haarverlies of dunner wordend haar</span>
+                        <span lang="en">Hair loss or thinning hair</span>
+                    </span>
+                </label>
+                <label class="check-item">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                    <span class="check-text">
+                        <span lang="nl">Snel koud — koude handen en voeten</span>
+                        <span lang="en">Cold intolerance — cold hands and feet</span>
+                    </span>
+                </label>
+                <label class="check-item">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                    <span class="check-text">
+                        <span lang="nl">Rusteloze benen, vooral 's avonds</span>
+                        <span lang="en">Restless legs, especially in the evening</span>
+                    </span>
+                </label>
+                <label class="check-item">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                    <span class="check-text">
+                        <span lang="nl">Broze nagels die snel breken</span>
+                        <span lang="en">Brittle nails that break easily</span>
+                    </span>
+                </label>
+                <label class="check-item">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                    <span class="check-text">
+                        <span lang="nl">Vaak ziek — verminderde weerstand</span>
+                        <span lang="en">Getting sick often — weakened immune system</span>
+                    </span>
+                </label>
+                <label class="check-item">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                    <span class="check-text">
+                        <span lang="nl">Slecht herstel na sporten</span>
+                        <span lang="en">Poor recovery after exercise</span>
+                    </span>
+                </label>
+            </div>
+
+            <p class="checklist-note">
+                <span lang="nl">Meerdere aangevinkt? Dan is het de moeite waard om je ferritine te laten checken.</span>
+                <span lang="en">Checked several? It's worth getting your ferritin tested.</span>
+            </p>
+        </div>
+    </section>
+
+    <!-- ==================== WHO'S AT RISK ==================== -->
+    <section class="section section-alt" id="risk">
+        <div class="container">
+            <h2>
+                <span lang="nl">Wie loopt risico?</span>
+                <span lang="en">Who's at risk?</span>
+            </h2>
+
+            <div class="risk-grid">
+                <div class="risk-card">
+                    <div class="risk-icon">🩸</div>
+                    <h3>
+                        <span lang="nl">Menstruerende vrouwen</span>
+                        <span lang="en">Menstruating women</span>
+                    </h3>
+                    <p>
+                        <span lang="nl">Je verliest 15-30mg ijzer per cyclus. Dat is moeilijk aan te vullen via voeding alleen — zeker als je geen rood vlees eet.</span>
+                        <span lang="en">You lose 15-30mg of iron per cycle. That's hard to replenish through diet alone — especially if you don't eat red meat.</span>
+                    </p>
+                </div>
+
+                <div class="risk-card">
+                    <div class="risk-icon">🌱</div>
+                    <h3>
+                        <span lang="nl">Vegetariërs &amp; veganisten</span>
+                        <span lang="en">Vegetarians &amp; vegans</span>
+                    </h3>
+                    <p>
+                        <span lang="nl">Plantaardig ijzer wordt maar voor 2-20% opgenomen, versus 15-35% bij ijzer uit vlees. Je hebt 1.8x zoveel nodig — dat is ~32mg per dag.</span>
+                        <span lang="en">Plant-based iron is only 2-20% absorbed, versus 15-35% from meat. You need 1.8x as much — that's ~32mg per day.</span>
+                    </p>
+                </div>
+
+                <div class="risk-card">
+                    <div class="risk-icon">🏃‍♀️</div>
+                    <h3>
+                        <span lang="nl">Sporters &amp; hardlopers</span>
+                        <span lang="en">Athletes &amp; runners</span>
+                    </h3>
+                    <p>
+                        <span lang="nl">Hardlopen vernietigt rode bloedcellen door de impact (foot strike hemolysis). Plus verlies via zweet. Dat kost je ~1-2mg extra ijzer per dag.</span>
+                        <span lang="en">Running destroys red blood cells through impact (foot strike hemolysis). Plus losses through sweat. That's ~1-2mg extra iron per day.</span>
+                    </p>
+                </div>
+
+                <div class="risk-card">
+                    <div class="risk-icon">☕</div>
+                    <h3>
+                        <span lang="nl">Koffie- &amp; theedrinkers</span>
+                        <span lang="en">Coffee &amp; tea drinkers</span>
+                    </h3>
+                    <p>
+                        <span lang="nl">Koffie vermindert ijzeropname met 50-70%. Thee met 60-80%. Matcha zelfs tot 90%. En ja — decaf ook: 40-60% reductie.</span>
+                        <span lang="en">Coffee reduces iron absorption by 50-70%. Tea by 60-80%. Matcha by up to 90%. And yes — decaf too: 40-60% reduction.</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="insight-box">
+                <p>
+                    <span lang="nl"><strong>Let op:</strong> Combinaties stapelen. Ben je een vegetarische vrouw die hardloopt en koffie drinkt? Dan is het bijna onmogelijk om je ferritine op peil te houden zonder supplementen.</span>
+                    <span lang="en"><strong>Note:</strong> Combinations stack. Are you a vegetarian woman who runs and drinks coffee? It's nearly impossible to maintain your ferritin without supplements.</span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== ABSORPTION BLOCKERS ==================== -->
+    <section class="section" id="blockers">
+        <div class="container">
+            <h2>
+                <span lang="nl">Wat blokkeert ijzeropname?</span>
+                <span lang="en">What blocks iron absorption?</span>
+            </h2>
+            <p>
+                <span lang="nl">Deze stoffen verminderen hoeveel ijzer je lichaam opneemt. Houd minimaal 2 uur afstand tot ijzerrijke maaltijden of supplementen.</span>
+                <span lang="en">These substances reduce how much iron your body absorbs. Keep at least 2 hours distance from iron-rich meals or supplements.</span>
+            </p>
+
+            <div class="blocker-table-wrapper">
+                <table class="blocker-table">
+                    <thead>
+                        <tr>
+                            <th>
+                                <span lang="nl">Wat</span>
+                                <span lang="en">What</span>
+                            </th>
+                            <th>
+                                <span lang="nl">Reductie</span>
+                                <span lang="en">Reduction</span>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <span lang="nl">Koffie</span>
+                                <span lang="en">Coffee</span>
+                            </td>
+                            <td>50-70%</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span lang="nl">Zwarte/groene thee</span>
+                                <span lang="en">Black/green tea</span>
+                            </td>
+                            <td>60-80%</td>
+                        </tr>
+                        <tr>
+                            <td>Matcha</td>
+                            <td>70-90%</td>
+                        </tr>
+                        <tr>
+                            <td>Cacao</td>
+                            <td>40-70%</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span lang="nl">Decaf koffie</span>
+                                <span lang="en">Decaf coffee</span>
+                            </td>
+                            <td>40-60%</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span lang="nl">Zuivel (calcium)</span>
+                                <span lang="en">Dairy (calcium)</span>
+                            </td>
+                            <td>50-60%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="insight-box">
+                <p>
+                    <span lang="nl"><strong>Verrassing:</strong> Decaf koffie blokkeert ook 40-60% van je ijzeropname. Het zijn de polyfenolen, niet de cafeïne. De 2-uur-regel geldt dus ook voor decaf.</span>
+                    <span lang="en"><strong>Surprise:</strong> Decaf coffee also blocks 40-60% of your iron absorption. It's the polyphenols, not the caffeine. The 2-hour rule applies to decaf too.</span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== WHAT TO DO ==================== -->
+    <section class="section section-alt" id="action">
+        <div class="container">
+            <h2>
+                <span lang="nl">Wat kun je doen?</span>
+                <span lang="en">What can you do?</span>
+            </h2>
+
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>
+                            <span lang="nl">Vraag om een ferritine-test</span>
+                            <span lang="en">Ask for a ferritin test</span>
+                        </h3>
+                        <p>
+                            <span lang="nl">Ga naar je huisarts en vraag specifiek om je <strong>ferritine</strong> te laten prikken — niet alleen hemoglobine. Hemoglobine meet bloedarmoede, maar ferritine meet je ijzervoorraad. Die kan laag zijn terwijl je hemoglobine nog "normaal" is.</span>
+                            <span lang="en">Visit your GP and specifically ask for a <strong>ferritin</strong> blood test — not just hemoglobin. Hemoglobin measures anemia, but ferritin measures your iron stores. These can be low while hemoglobin is still "normal."</span>
+                        </p>
+                        <p class="step-tip">
+                            <span lang="nl">💡 Zeg: "Ik wil graag mijn ferritine laten controleren." In Nederland is dit bloedonderzoek gedekt door je basisverzekering.</span>
+                            <span lang="en">💡 Say: "I'd like to have my ferritin checked." In the Netherlands, this blood test is covered by basic insurance.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>
+                            <span lang="nl">Ken je streefwaarde</span>
+                            <span lang="en">Know your target</span>
+                        </h3>
+                        <p>
+                            <span lang="nl">Accepteer niet zomaar "normaal." Vraag naar het <strong>getal</strong>. Een ferritine van 12 µg/L is technisch normaal maar waarschijnlijk te laag als je klachten hebt. Streven naar minimaal <strong>30 µg/L</strong>, optimaal <strong>50-70 µg/L</strong>.</span>
+                            <span lang="en">Don't just accept "normal." Ask for the <strong>number</strong>. A ferritin of 12 µg/L is technically normal but probably too low if you have symptoms. Aim for at least <strong>30 µg/L</strong>, optimally <strong>50-70 µg/L</strong>.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>
+                            <span lang="nl">Slim supplementeren</span>
+                            <span lang="en">Supplement smart</span>
+                        </h3>
+                        <p>
+                            <span lang="nl">Als je gaat supplementeren: neem ijzer samen met <strong>vitamine C</strong> (dat verdubbelt of verdrievoudigt de opname). Neem het bij voorkeur op een <strong>lege maag</strong>. Ferrofumaraat op recept is vergoed door je basisverzekering.</span>
+                            <span lang="en">If you supplement: take iron with <strong>vitamin C</strong> (it doubles or triples absorption). Take it on an <strong>empty stomach</strong> when possible. In the Netherlands, prescription ferrofumarate is covered by basic insurance.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>
+                            <span lang="nl">Houd 2 uur afstand</span>
+                            <span lang="en">Keep 2 hours distance</span>
+                        </h3>
+                        <p>
+                            <span lang="nl">Drink geen koffie, thee, matcha of cacao binnen 2 uur rondom je ijzersupplement of ijzerrijke maaltijd. Dit geldt ook voor decaf en zuivelproducten.</span>
+                            <span lang="en">Don't drink coffee, tea, matcha, or cacao within 2 hours of your iron supplement or iron-rich meal. This also applies to decaf and dairy products.</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="insight-box">
+                <p>
+                    <span lang="nl"><strong>Over de huisarts:</strong> Nederlandse artsen zijn van nature terughoudend — "paracetamol en afwachten" is de cultuur. Als je je niet serieus genomen voelt, is het oké om door te vragen of een second opinion te zoeken. Je gezondheid is het waard.</span>
+                    <span lang="en"><strong>About your GP:</strong> Dutch doctors tend to be conservative — a "wait and see" culture. If you feel you're not being taken seriously, it's okay to push back or seek a second opinion. Your health is worth it.</span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="disclaimer">
+                <p>
+                    <span lang="nl"><strong>Disclaimer:</strong> Deze website is informatief en vervangt geen medisch advies. Overleg altijd met je huisarts of specialist voordat je wijzigingen aanbrengt in je supplementen of behandeling.</span>
+                    <span lang="en"><strong>Disclaimer:</strong> This website is educational and does not replace medical advice. Always consult your GP or specialist before making changes to your supplements or treatment.</span>
+                </p>
+            </div>
+            <div class="footer-links">
+                <p>
+                    <span lang="nl">Bronnen: Foy et al., <em>Nature</em> 2025 (hematologische setpoints) · <a href="https://www.olvg.nl/verwijsnieuws/normaalwaarden-ferritine-aangepast/" target="_blank" rel="noopener">OLVG ferritine-update 2024</a> · <a href="https://open.spotify.com/episode/2NefFbyG4ytpBOVh7FFAbC" target="_blank" rel="noopener">Huisarts Podcast — IJzergebrek</a> · WHO richtlijnen ijzerstatus (2020) · NHG-Standaard Anemie · Voedingscentrum.nl</span>
+                    <span lang="en">Sources: Foy et al., <em>Nature</em> 2025 (haematological setpoints) · <a href="https://www.olvg.nl/verwijsnieuws/normaalwaarden-ferritine-aangepast/" target="_blank" rel="noopener">OLVG ferritin update 2024</a> · <a href="https://open.spotify.com/episode/2NefFbyG4ytpBOVh7FFAbC" target="_blank" rel="noopener">Huisarts Podcast — Iron Deficiency</a> · WHO guidelines on iron status (2020) · NHG-Standaard Anemia · Voedingscentrum.nl</span>
+                </p>
+            </div>
+            <div class="footer-credit">
+                <p>
+                    <span lang="nl">Gemaakt om bewustzijn te creëren over ijzertekort bij vrouwen in Nederland.</span>
+                    <span lang="en">Made to raise awareness about iron deficiency in women in the Netherlands.</span>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
