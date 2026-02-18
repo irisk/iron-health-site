@@ -250,7 +250,7 @@ strong {
 }
 
 .ferritin-marker-optimal::before {
-    background: rgba(91, 138, 94, 0.5);
+    background: #5B8A5E;
 }
 
 .ferritin-marker-label {
@@ -271,7 +271,7 @@ strong {
 }
 
 .ferritin-marker-optimal .ferritin-marker-label {
-    color: rgba(91, 138, 94, 0.7);
+    color: #5B8A5E;
 }
 
 /* Tick labels — positioned absolutely to match track percentages */
