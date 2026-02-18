@@ -243,8 +243,6 @@ strong {
 
 .ferritin-marker-old::before {
     background: var(--color-warm-grey);
-    height: 20px;
-    top: -10px;
 }
 
 .ferritin-marker-new::before {
@@ -253,8 +251,6 @@ strong {
 
 .ferritin-marker-optimal::before {
     background: rgba(91, 138, 94, 0.5);
-    height: 20px;
-    top: -10px;
 }
 
 .ferritin-marker-label {
