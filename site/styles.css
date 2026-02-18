@@ -209,6 +209,22 @@ strong {
     font-size: 1.1rem;
 }
 
+.section-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.8rem;
+    height: 1.8rem;
+    background: var(--color-rust);
+    color: white;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 0.9rem;
+    margin-right: 0.5rem;
+    vertical-align: middle;
+    flex-shrink: 0;
+}
+
 .key-insight-content h3 {
     font-size: 1.05rem;
     margin-bottom: 0.4rem;
