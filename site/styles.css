@@ -156,17 +156,19 @@ strong {
 }
 
 .disclaimer-banner {
-    background: var(--color-warm-light);
-    border-bottom: 1px solid rgba(0,0,0,0.08);
-    padding: 0.75rem 0;
+    padding: 0;
     text-align: center;
+    margin-bottom: -2rem;
+}
+
+.disclaimer-banner .container {
+    padding-top: 1.5rem;
 }
 
 .disclaimer-banner p {
-    font-size: 0.85rem;
-    color: var(--color-dark-soft);
+    font-size: 0.8rem;
+    color: var(--color-warm-grey);
     margin: 0;
-    font-style: italic;
 }
 
 .cta-button {
@@ -302,6 +304,35 @@ strong {
 
 .explainer-content p:last-child {
     margin-bottom: 0;
+}
+
+.explainer-inline {
+    background: transparent;
+    box-shadow: none;
+    border-radius: 0;
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+}
+
+.explainer-inline summary {
+    padding: 0.4rem 0;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--color-warm-grey);
+}
+
+.explainer-inline summary:hover {
+    background: transparent;
+    color: var(--color-rust);
+}
+
+.explainer-inline .explainer-content {
+    padding: 0 0 0.5rem;
+}
+
+.explainer-inline .explainer-content p {
+    font-size: 0.85rem;
+    color: var(--color-dark-soft);
 }
 
 /* ==================== FERRITIN SCALE ==================== */
