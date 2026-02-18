@@ -110,36 +110,75 @@
                 <span lang="en">A study of 12,407 healthy people over 20 years (published in <em>Nature</em>, 2025) shows: your Hb only fluctuates ~2.8% within yourself, while variation between people is ~6.6%. This means the "normal" range is far too broad to flag an individual decline.</span>
             </p>
 
+            <p>
+                <span lang="nl">Het lab hanteert een "normaal" Hb-bereik van <strong>7,5 – 10,0 mmol/L</strong> voor vrouwen (NHG-Standaard). Maar kijk hoe breed dat is — en hoe smal jouw eigen bereik eigenlijk is:</span>
+                <span lang="en">Labs use a "normal" Hb range of <strong>7.5 – 10.0 mmol/L</strong> for women (NHG guideline). But look at how wide that is — and how narrow your own range actually is:</span>
+            </p>
+
             <div class="hb-example">
                 <div class="hb-example-header">
                     <span lang="nl">Voorbeeld</span>
                     <span lang="en">Example</span>
                 </div>
                 <div class="hb-example-body">
-                    <div class="hb-bar">
-                        <div class="hb-marker hb-marker-personal" style="left: 80%;">
-                            <span class="hb-label">8,7</span>
-                            <span class="hb-desc">
-                                <span lang="nl">Jouw setpoint</span>
-                                <span lang="en">Your setpoint</span>
-                            </span>
+                    <div class="hb-scale">
+                        <div class="hb-track">
+                            <!-- Population range: 7.5-10.0. On 7.0-10.5 scale: left=(0.5/3.5)=14.3%, width=(2.5/3.5)=71.4% -->
+                            <div class="hb-population-range" style="left: 14.3%; width: 71.4%;"></div>
+                            <!-- Personal range band: 8.7 ±0.25 → 8.45-8.95. On 7.0-10.5 scale: left=(8.45-7)/3.5=41.4%, width=(0.5/3.5)=14.3% -->
+                            <div class="hb-personal-band" style="left: 41.4%; width: 14.3%;"></div>
+                            <!-- Dot: 7.7. Position: (7.7-7)/3.5 = 20% -->
+                            <div class="hb-dot hb-dot-current" style="left: 20%;">
+                                <span class="hb-dot-label">7,7</span>
+                            </div>
+                            <!-- Dot: 8.7. Position: (8.7-7)/3.5 = 48.6% -->
+                            <div class="hb-dot hb-dot-setpoint" style="left: 48.6%;">
+                                <span class="hb-dot-label">8,7</span>
+                            </div>
                         </div>
-                        <div class="hb-marker hb-marker-dropped" style="left: 33%;">
-                            <span class="hb-label">7,7</span>
-                            <span class="hb-desc">
-                                <span lang="nl">"Normaal" maar niet jouw normaal</span>
-                                <span lang="en">"Normal" but not your normal</span>
-                            </span>
+                        <!-- Scale tick labels -->
+                        <div class="hb-scale-ticks">
+                            <span>7,0</span>
+                            <span>7,5</span>
+                            <span>8,0</span>
+                            <span>8,5</span>
+                            <span>9,0</span>
+                            <span>9,5</span>
+                            <span>10,0</span>
+                            <span>10,5</span>
                         </div>
-                        <div class="hb-range-line"></div>
+                        <div class="hb-scale-unit">mmol/L</div>
                     </div>
-                    <div class="hb-range-labels">
-                        <span>7,5</span>
-                        <span>
-                            <span lang="nl">Lab "normaal" bereik</span>
-                            <span lang="en">Lab "normal" range</span>
-                        </span>
-                        <span>10,0 mmol/L</span>
+                    <!-- Legend — ordered: population range → setpoint + variation → measured point -->
+                    <div class="hb-legend">
+                        <div class="hb-legend-item">
+                            <span class="hb-legend-range"></span>
+                            <span>
+                                <span lang="nl">Lab "normaal" bereik voor vrouwen: 7,5 – 10,0 mmol/L (NHG-Standaard)</span>
+                                <span lang="en">Lab "normal" range for women: 7.5 – 10.0 mmol/L (NHG guideline)</span>
+                            </span>
+                        </div>
+                        <div class="hb-legend-item">
+                            <span class="hb-legend-dot hb-legend-setpoint"></span>
+                            <span>
+                                <span lang="nl">Jouw persoonlijke setpoint: 8,7 mmol/L</span>
+                                <span lang="en">Your personal setpoint: 8.7 mmol/L</span>
+                            </span>
+                        </div>
+                        <div class="hb-legend-item">
+                            <span class="hb-legend-band"></span>
+                            <span>
+                                <span lang="nl">Jouw persoonlijke variatie: ~2,8% (8,45 – 8,95)</span>
+                                <span lang="en">Your personal variation: ~2.8% (8.45 – 8.95)</span>
+                            </span>
+                        </div>
+                        <div class="hb-legend-item">
+                            <span class="hb-legend-dot hb-legend-current"></span>
+                            <span>
+                                <span lang="nl">Gemeten waarde: 7,7 — "normaal" volgens het lab, maar ver buiten jouw persoonlijke bereik</span>
+                                <span lang="en">Measured value: 7.7 — "normal" according to the lab, but far outside your personal range</span>
+                            </span>
+                        </div>
                     </div>
                 </div>
                 <p class="hb-example-text">
@@ -386,8 +425,156 @@
         </div>
     </section>
 
+    <!-- ==================== IRON IN FOOD ==================== -->
+    <section class="section section-alt" id="food">
+        <div class="container">
+            <h2>
+                <span lang="nl">Hoeveel ijzer zit er in je eten?</span>
+                <span lang="en">How much iron is in your food?</span>
+            </h2>
+            <p>
+                <span lang="nl">Menstruerende vrouwen hebben ~18mg ijzer per dag nodig. Vegetariërs ~32mg. Kijk hoe lastig dat is om via voeding te halen:</span>
+                <span lang="en">Menstruating women need ~18mg of iron per day. Vegetarians ~32mg. See how hard that is to get from food alone:</span>
+            </p>
+
+            <div class="food-table-wrapper">
+                <table class="blocker-table food-table">
+                    <thead>
+                        <tr>
+                            <th>
+                                <span lang="nl">Voeding</span>
+                                <span lang="en">Food</span>
+                            </th>
+                            <th>
+                                <span lang="nl">IJzer per 100g</span>
+                                <span lang="en">Iron per 100g</span>
+                            </th>
+                            <th>
+                                <span lang="nl">Type</span>
+                                <span lang="en">Type</span>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <span lang="nl">Kippenlevertjes</span>
+                                <span lang="en">Chicken liver</span>
+                            </td>
+                            <td><strong>9,0 mg</strong></td>
+                            <td>
+                                <span class="iron-type iron-heme">
+                                    <span lang="nl">Heemijzer (15-35% opname)</span>
+                                    <span lang="en">Heme iron (15-35% absorbed)</span>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span lang="nl">Pompoenpitten</span>
+                                <span lang="en">Pumpkin seeds</span>
+                            </td>
+                            <td><strong>8,8 mg</strong></td>
+                            <td>
+                                <span class="iron-type iron-nonheme">
+                                    <span lang="nl">Niet-heem (2-20% opname)</span>
+                                    <span lang="en">Non-heme (2-20% absorbed)</span>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span lang="nl">Hamburger (rund)</span>
+                                <span lang="en">Hamburger (beef)</span>
+                            </td>
+                            <td><strong>2,7 mg</strong></td>
+                            <td>
+                                <span class="iron-type iron-heme">
+                                    <span lang="nl">Heemijzer (15-35% opname)</span>
+                                    <span lang="en">Heme iron (15-35% absorbed)</span>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span lang="nl">Linzen (gekookt)</span>
+                                <span lang="en">Lentils (cooked)</span>
+                            </td>
+                            <td><strong>3,3 mg</strong></td>
+                            <td>
+                                <span class="iron-type iron-nonheme">
+                                    <span lang="nl">Niet-heem (2-20% opname)</span>
+                                    <span lang="en">Non-heme (2-20% absorbed)</span>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span lang="nl">Spinazie (gekookt)</span>
+                                <span lang="en">Spinach (cooked)</span>
+                            </td>
+                            <td><strong>3,6 mg</strong></td>
+                            <td>
+                                <span class="iron-type iron-nonheme">
+                                    <span lang="nl">Niet-heem — oxalaten blokkeren eigen opname</span>
+                                    <span lang="en">Non-heme — oxalates block own absorption</span>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span lang="nl">Kikkererwten</span>
+                                <span lang="en">Chickpeas</span>
+                            </td>
+                            <td><strong>2,9 mg</strong></td>
+                            <td>
+                                <span class="iron-type iron-nonheme">
+                                    <span lang="nl">Niet-heem (2-20% opname)</span>
+                                    <span lang="en">Non-heme (2-20% absorbed)</span>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span lang="nl">Tofu (stevig)</span>
+                                <span lang="en">Tofu (firm)</span>
+                            </td>
+                            <td><strong>2,7 mg</strong></td>
+                            <td>
+                                <span class="iron-type iron-nonheme">
+                                    <span lang="nl">Niet-heem (2-20% opname)</span>
+                                    <span lang="en">Non-heme (2-20% absorbed)</span>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span lang="nl">Ei (1 groot)</span>
+                                <span lang="en">Egg (1 large)</span>
+                            </td>
+                            <td><strong>0,9 mg</strong></td>
+                            <td>
+                                <span class="iron-type iron-nonheme">
+                                    <span lang="nl">Niet-heem (2-20% opname)</span>
+                                    <span lang="en">Non-heme (2-20% absorbed)</span>
+                                </span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="insight-box">
+                <p>
+                    <span lang="nl"><strong>Rekensom:</strong> Om 18mg ijzer binnen te krijgen via linzen alleen, heb je ~550g gekookte linzen nodig. En daarvan neem je slechts 2-20% op. Met vitamine C erbij verbetert de opname 2-3x — maar zelfs dan is het voor veel vrouwen lastig om voldoende binnen te krijgen zonder supplementen.</span>
+                    <span lang="en"><strong>Do the math:</strong> To get 18mg of iron from lentils alone, you'd need ~550g of cooked lentils. And you only absorb 2-20% of that. Adding vitamin C improves absorption 2-3x — but even then, many women struggle to get enough without supplements.</span>
+                </p>
+            </div>
+        </div>
+    </section>
+
     <!-- ==================== WHAT TO DO ==================== -->
-    <section class="section section-alt" id="action">
+    <section class="section" id="action">
         <div class="container">
             <h2>
                 <span lang="nl">Wat kun je doen?</span>
@@ -484,7 +671,7 @@
     </section>
 
     <!-- ==================== RESOURCES ==================== -->
-    <section class="section" id="resources">
+    <section class="section section-alt" id="resources">
         <div class="container">
             <h2>
                 <span lang="nl">Bronnen &amp; verder lezen</span>

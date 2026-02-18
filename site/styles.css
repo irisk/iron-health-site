@@ -270,73 +270,163 @@ strong {
 }
 
 .hb-example-header {
-    background: var(--color-rust);
-    color: white;
+    background: var(--color-dark);
+    color: var(--color-cream);
     padding: 0.75rem 1.5rem;
     font-weight: 600;
     font-size: 0.9rem;
 }
 
 .hb-example-body {
-    padding: 2rem 1.5rem 1rem;
+    padding: 2.5rem 1.5rem 1.5rem;
 }
 
-.hb-bar {
+/* Scale container */
+.hb-scale {
     position: relative;
-    height: 2.5rem;
-    background: linear-gradient(to right, var(--color-rust-light) 0%, #e8d5a0 50%, var(--color-green) 100%);
-    border-radius: 0.75rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
 }
 
-.hb-range-line {
+/* The track line */
+.hb-track {
+    position: relative;
+    height: 4px;
+    background: #D5CEC8;
+    border-radius: 2px;
+    margin: 3rem 0 1.5rem;
+}
+
+/* Population "normal" range — subtle background on the track */
+.hb-population-range {
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    top: -6px;
+    height: 16px;
+    background: #E8E2DC;
+    border-radius: 8px;
+    z-index: 1;
 }
 
-.hb-marker {
+/* Personal variation band around setpoint */
+.hb-personal-band {
     position: absolute;
-    top: -0.5rem;
-    transform: translateX(-50%);
-    text-align: center;
+    top: -14px;
+    height: 32px;
+    background: rgba(91, 123, 165, 0.15);
+    border: 2px dashed rgba(91, 123, 165, 0.4);
+    border-radius: 16px;
+    z-index: 2;
 }
 
-.hb-label {
+/* Dots */
+.hb-dot {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+}
+
+.hb-dot::before {
+    content: '';
     display: block;
-    background: var(--color-dark);
-    color: white;
-    padding: 0.2rem 0.5rem;
-    border-radius: 0.25rem;
-    font-size: 0.8rem;
-    font-weight: 700;
-    white-space: nowrap;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.2);
 }
 
-.hb-marker-personal .hb-label {
-    background: var(--color-green);
+.hb-dot-setpoint::before {
+    background: #5B7BA5;
 }
 
-.hb-marker-dropped .hb-label {
+.hb-dot-current::before {
     background: var(--color-rust);
 }
 
-.hb-desc {
-    display: block;
-    font-size: 0.7rem;
-    color: var(--color-dark-soft);
-    margin-top: 0.25rem;
+.hb-dot-label {
+    position: absolute;
+    bottom: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.85rem;
+    font-weight: 700;
     white-space: nowrap;
+    padding: 0.1rem 0.4rem;
+    border-radius: 0.25rem;
 }
 
-.hb-range-labels {
+.hb-dot-setpoint .hb-dot-label {
+    color: #5B7BA5;
+}
+
+.hb-dot-current .hb-dot-label {
+    color: var(--color-rust);
+}
+
+/* Scale tick labels */
+.hb-scale-ticks {
     display: flex;
     justify-content: space-between;
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     color: var(--color-warm-grey);
-    margin-top: 2.5rem;
+    margin-top: 0.5rem;
+}
+
+.hb-scale-unit {
+    text-align: right;
+    font-size: 0.7rem;
+    color: var(--color-warm-grey);
+    margin-top: 0.25rem;
+}
+
+/* Legend */
+.hb-legend {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--color-cream-dark);
+}
+
+.hb-legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.8rem;
+    color: var(--color-dark-soft);
+}
+
+.hb-legend-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.hb-legend-setpoint {
+    background: #5B7BA5;
+}
+
+.hb-legend-current {
+    background: var(--color-rust);
+}
+
+.hb-legend-band {
+    width: 20px;
+    height: 10px;
+    border: 1.5px dashed rgba(91, 123, 165, 0.5);
+    background: rgba(91, 123, 165, 0.1);
+    border-radius: 3px;
+    flex-shrink: 0;
+}
+
+.hb-legend-range {
+    width: 20px;
+    height: 10px;
+    background: #E8E2DC;
+    border-radius: 3px;
+    flex-shrink: 0;
 }
 
 .hb-example-text {
@@ -563,6 +653,29 @@ strong {
     padding: 0.75rem 1rem;
     border-radius: 0.5rem;
     font-size: 0.9rem !important;
+}
+
+/* ==================== FOOD TABLE ==================== */
+.food-table td:nth-child(2) {
+    white-space: nowrap;
+}
+
+.iron-type {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 500;
+    padding: 0.2rem 0.6rem;
+    border-radius: 1rem;
+}
+
+.iron-heme {
+    background: #F0E0D8;
+    color: var(--color-rust-dark);
+}
+
+.iron-nonheme {
+    background: var(--color-green-light);
+    color: var(--color-green);
 }
 
 /* ==================== RESOURCES ==================== */
