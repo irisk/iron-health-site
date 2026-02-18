@@ -50,19 +50,10 @@ body.lang-en [lang="nl"] {
     display: none;
 }
 
-/* Keep toggle button text always visible */
-.lang-toggle [lang="en"],
-.lang-toggle [lang="nl"] {
-    display: inline;
-}
-
-body.lang-en .lang-toggle [lang="nl"] {
-    display: inline;
-}
-
-body.lang-en .lang-toggle [lang="en"] {
-    display: none;
-}
+/* Toggle button: show opposite language label
+   Dutch mode: show "EN" (lang=nl span), hide "NL" (lang=en span)
+   English mode: show "NL" (lang=en span), hide "EN" (lang=nl span)
+   This is handled by the general [lang] rules above — no overrides needed */
 
 .lang-toggle {
     position: fixed;
