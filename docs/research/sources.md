@@ -72,6 +72,21 @@ Every claim on the site should trace back to a source listed here. Sources are g
     - Source: Buoro S. et al. Clin Chem Lab Med. 2018
     - URL: https://www.degruyterbrill.com/document/doi/10.1515/cclm-2017-1155/html
 
+## Ferritin Gender Disparity & Functional Threshold
+
+23. **ASH 2023 — "Sex, lies, and iron deficiency"**
+    - A call to change ferritin reference ranges
+    - 30-50% of "healthy" women have zero bone marrow iron stores — so "normal" ranges codify disease
+    - No physiological reason for sex-based ferritin ranges
+    - Ferritin should be at least 50 µg/L for symptoms to resolve and iron metabolism to normalize
+    - Three clinical trials showed iron for women with normal Hb but ferritin <50 µg/L significantly reduced fatigue
+    - Source: Martens K, DeLoughery TG. ASH Education Program. 2023
+    - URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC10727104/
+
+24. **BMJ — "Why should women have lower reference limits?"**
+    - Questions the biological basis for sex-based ferritin and hemoglobin thresholds
+    - URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC1120434/
+
 ## Iron Absorption
 
 11. **Heme vs Non-Heme Absorption Rates**

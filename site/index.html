@@ -44,51 +44,77 @@
                 <span lang="en">"Normal" ≠ Healthy</span>
             </h2>
             <p>
-                <span lang="nl">Als je arts zegt dat je bloedwaarden "normaal" zijn, betekent dat niet automatisch dat je je goed hoort te voelen. De laboratoriumwaarden voor ferritine (je ijzervoorraad) zijn gebaseerd op verouderde referentiewaarden — niet op wat optimaal is voor je gezondheid. Die oude grenswaarden worden nu bijgesteld: ziekenhuizen zoals OLVG Amsterdam en Isala Zwolle hanteren sinds 2024 een ondergrens van 30 µg/L in plaats van de oude 6-15 µg/L.</span>
-                <span lang="en">When your doctor says your blood values are "normal," that doesn't automatically mean you should feel good. Lab reference ranges for ferritin (your iron stores) are based on outdated thresholds — not on what's optimal for your health. Those old values are being updated: hospitals like OLVG Amsterdam and Isala Zwolle have adopted a lower limit of 30 µg/L since 2024, replacing the old 6-15 µg/L.</span>
+                <span lang="nl">Ferritine meet je ijzervoorraad. Het "normale" bereik voor vrouwen was jarenlang <strong>10-150 µg/L</strong> — terwijl het voor mannen al <strong>30-400 µg/L</strong> was. Dat verschil heeft geen biologische basis: vrouwen verliezen simpelweg meer ijzer door menstruatie. De lage ondergrens voor vrouwen weerspiegelt wijdverbreid tekort in de bevolking, niet wat gezond is.</span>
+                <span lang="en">Ferritin measures your iron stores. The "normal" range for women was <strong>10-150 µg/L</strong> for years — while for men it was already <strong>30-400 µg/L</strong>. That difference has no biological basis: women simply lose more iron through menstruation. The low female threshold reflects widespread deficiency in the population, not what's healthy.</span>
+            </p>
+            <p>
+                <span lang="nl">Dat verandert nu. Ziekenhuizen zoals <strong>OLVG Amsterdam</strong> en <strong>Isala Zwolle</strong> hanteren sinds 2024 een ondergrens van <strong>30 µg/L</strong> voor iedereen. En onderzoek laat zien dat klachten vaak pas verdwijnen boven de <strong>50 µg/L</strong>.</span>
+                <span lang="en">That's changing now. Hospitals like <strong>OLVG Amsterdam</strong> and <strong>Isala Zwolle</strong> have adopted a lower limit of <strong>30 µg/L</strong> for everyone since 2024. And research shows symptoms often only resolve above <strong>50 µg/L</strong>.</span>
             </p>
 
             <!-- Ferritin Scale Visual -->
             <div class="ferritin-scale">
-                <div class="scale-labels">
+                <div class="ferritin-track">
+                    <!-- Old "normal" range: 10-150. On 0-160 scale: left=6.25%, width=87.5% -->
+                    <div class="ferritin-range ferritin-old-range" style="left: 6.25%; width: 87.5%;"></div>
+                    <!-- New corrected range: 30-150. On 0-160 scale: left=18.75%, width=75% -->
+                    <div class="ferritin-range ferritin-new-range" style="left: 18.75%; width: 75%;"></div>
+                    <!-- Optimal zone: 50+. On 0-160 scale: left=31.25% -->
+                    <div class="ferritin-optimal-zone" style="left: 31.25%; right: 0;"></div>
+                    <!-- Marker: old lower limit 10 -->
+                    <div class="ferritin-marker ferritin-marker-old" style="left: 6.25%;">
+                        <span class="ferritin-marker-label">10</span>
+                    </div>
+                    <!-- Marker: new lower limit 30 -->
+                    <div class="ferritin-marker ferritin-marker-new" style="left: 18.75%;">
+                        <span class="ferritin-marker-label">30</span>
+                    </div>
+                    <!-- Marker: functional threshold 50 -->
+                    <div class="ferritin-marker ferritin-marker-optimal" style="left: 31.25%;">
+                        <span class="ferritin-marker-label">50</span>
+                    </div>
+                </div>
+                <div class="ferritin-ticks">
                     <span>0</span>
-                    <span>15</span>
-                    <span>30</span>
-                    <span>50</span>
-                    <span>70</span>
-                    <span>100 µg/L</span>
+                    <span>20</span>
+                    <span>40</span>
+                    <span>60</span>
+                    <span>80</span>
+                    <span>100</span>
+                    <span>120</span>
+                    <span>140</span>
+                    <span>160 µg/L</span>
                 </div>
-                <div class="scale-bar">
-                    <div class="scale-zone zone-low" style="width: 15%;">
-                        <span lang="nl">Te laag</span>
-                        <span lang="en">Too low</span>
+                <!-- Legend -->
+                <div class="ferritin-legend">
+                    <div class="ferritin-legend-item">
+                        <span class="ferritin-legend-swatch ferritin-swatch-old"></span>
+                        <span>
+                            <span lang="nl">Oud "normaal" bereik vrouwen: 10-150 µg/L</span>
+                            <span lang="en">Old "normal" range for women: 10-150 µg/L</span>
+                        </span>
                     </div>
-                    <div class="scale-zone zone-grey" style="width: 15%;">
-                        <span lang="nl">"Normaal"</span>
-                        <span lang="en">"Normal"</span>
+                    <div class="ferritin-legend-item">
+                        <span class="ferritin-legend-swatch ferritin-swatch-new"></span>
+                        <span>
+                            <span lang="nl">Nieuwe ondergrens (OLVG/Isala, 2024): 30 µg/L — gelijk aan mannen</span>
+                            <span lang="en">New lower limit (OLVG/Isala, 2024): 30 µg/L — equal to men</span>
+                        </span>
                     </div>
-                    <div class="scale-zone zone-optimal" style="width: 40%;">
-                        <span lang="nl">Optimaal</span>
-                        <span lang="en">Optimal</span>
-                    </div>
-                    <div class="scale-zone zone-good" style="width: 30%;"></div>
-                </div>
-                <div class="scale-annotations">
-                    <div class="annotation annotation-lab">
-                        <span lang="nl">Lab "normaal": 6-15 µg/L</span>
-                        <span lang="en">Lab "normal": 6-15 µg/L</span>
-                    </div>
-                    <div class="annotation annotation-optimal">
-                        <span lang="nl">Optimaal: 30-70 µg/L</span>
-                        <span lang="en">Optimal: 30-70 µg/L</span>
+                    <div class="ferritin-legend-item">
+                        <span class="ferritin-legend-swatch ferritin-swatch-optimal"></span>
+                        <span>
+                            <span lang="nl">Klachten verdwijnen vaak pas boven 50 µg/L (ASH 2023, klinische studies)</span>
+                            <span lang="en">Symptoms often only resolve above 50 µg/L (ASH 2023, clinical trials)</span>
+                        </span>
                     </div>
                 </div>
             </div>
 
             <div class="insight-box">
                 <p>
-                    <span lang="nl"><strong>Het inzicht:</strong> Je kunt een ferritine van 12 µg/L hebben — "normaal" volgens het lab — en toch last hebben van vermoeidheid, haarverlies en concentratieproblemen. Met een ferritine van 30+ µg/L voel je je waarschijnlijk een stuk beter. Toen Isala Zwolle de grens verhoogde naar 30 µg/L, werden er <strong>30% meer</strong> diagnoses gesteld.</span>
-                    <span lang="en"><strong>The insight:</strong> You can have a ferritin of 12 µg/L — "normal" according to the lab — and still suffer from fatigue, hair loss, and concentration problems. At a ferritin of 30+ µg/L, you'd likely feel significantly better. When Isala Zwolle raised their threshold to 30 µg/L, they diagnosed <strong>30% more</strong> cases of iron deficiency.</span>
+                    <span lang="nl"><strong>Het probleem:</strong> Met de oude ondergrens van 10 µg/L was een ferritine van 12 "normaal" — terwijl je daarmee klachten kunt hebben als vermoeidheid, haarverlies en concentratieproblemen. Toen Isala Zwolle de grens verhoogde naar 30 µg/L, werden er <strong>30% meer</strong> diagnoses gesteld.</span>
+                    <span lang="en"><strong>The problem:</strong> With the old lower limit of 10 µg/L, a ferritin of 12 was "normal" — while you could have symptoms like fatigue, hair loss, and concentration problems. When Isala Zwolle raised their threshold to 30 µg/L, they diagnosed <strong>30% more</strong> cases of iron deficiency.</span>
                 </p>
             </div>
         </div>

@@ -181,70 +181,143 @@ strong {
     box-shadow: 0 2px 12px rgba(0,0,0,0.06);
 }
 
-.scale-labels {
+.ferritin-track {
+    position: relative;
+    height: 4px;
+    background: #D5CEC8;
+    border-radius: 2px;
+    margin: 3rem 0 1.5rem;
+}
+
+/* Old "normal" range bar */
+.ferritin-old-range {
+    position: absolute;
+    top: -8px;
+    height: 20px;
+    background: #E8E2DC;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+/* New corrected range bar */
+.ferritin-new-range {
+    position: absolute;
+    top: -8px;
+    height: 20px;
+    background: #C8DCCA;
+    border-radius: 10px;
+    z-index: 2;
+}
+
+/* Optimal zone (50+) */
+.ferritin-optimal-zone {
+    position: absolute;
+    top: -12px;
+    height: 28px;
+    background: rgba(91, 138, 94, 0.2);
+    border: 2px dashed rgba(91, 138, 94, 0.4);
+    border-radius: 14px;
+    z-index: 3;
+}
+
+/* Markers on the scale */
+.ferritin-marker {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 4;
+}
+
+.ferritin-marker::before {
+    content: '';
+    display: block;
+    width: 3px;
+    height: 28px;
+    border-radius: 1.5px;
+    margin: 0 auto;
+}
+
+.ferritin-marker-old::before {
+    background: var(--color-warm-grey);
+    height: 20px;
+}
+
+.ferritin-marker-new::before {
+    background: #5B8A5E;
+}
+
+.ferritin-marker-optimal::before {
+    background: rgba(91, 138, 94, 0.5);
+    border: none;
+    height: 20px;
+}
+
+.ferritin-marker-label {
+    display: block;
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-top: 4px;
+    color: var(--color-dark);
+}
+
+.ferritin-marker-old .ferritin-marker-label {
+    color: var(--color-warm-grey);
+}
+
+.ferritin-marker-new .ferritin-marker-label {
+    color: #5B8A5E;
+}
+
+.ferritin-marker-optimal .ferritin-marker-label {
+    color: rgba(91, 138, 94, 0.7);
+}
+
+/* Tick labels */
+.ferritin-ticks {
     display: flex;
     justify-content: space-between;
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     color: var(--color-warm-grey);
-    margin-bottom: 0.5rem;
-    padding: 0 0.25rem;
+    margin-top: 2rem;
 }
 
-.scale-bar {
+/* Legend */
+.ferritin-legend {
     display: flex;
-    height: 2.5rem;
-    border-radius: 0.75rem;
-    overflow: hidden;
-    margin-bottom: 1rem;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1.25rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--color-cream-dark);
 }
 
-.scale-zone {
+.ferritin-legend-item {
     display: flex;
     align-items: center;
-    justify-content: center;
-    font-size: 0.75rem;
-    font-weight: 600;
-    color: white;
-}
-
-.zone-low {
-    background: var(--color-rust);
-}
-
-.zone-grey {
-    background: var(--color-warm-grey);
-}
-
-.zone-optimal {
-    background: var(--color-green);
-}
-
-.zone-good {
-    background: #9BC49D;
-}
-
-.scale-annotations {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
     gap: 0.5rem;
-}
-
-.annotation {
     font-size: 0.8rem;
-    font-weight: 500;
-    padding: 0.25rem 0.75rem;
-    border-radius: 1rem;
-}
-
-.annotation-lab {
-    background: #E8E0DA;
     color: var(--color-dark-soft);
 }
 
-.annotation-optimal {
-    background: var(--color-green-light);
-    color: var(--color-green);
+.ferritin-legend-swatch {
+    width: 20px;
+    height: 10px;
+    border-radius: 3px;
+    flex-shrink: 0;
+}
+
+.ferritin-swatch-old {
+    background: #E8E2DC;
+}
+
+.ferritin-swatch-new {
+    background: #C8DCCA;
+}
+
+.ferritin-swatch-optimal {
+    background: rgba(91, 138, 94, 0.15);
+    border: 1.5px dashed rgba(91, 138, 94, 0.4);
 }
 
 /* ==================== INSIGHT BOX ==================== */
