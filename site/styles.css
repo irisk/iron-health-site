@@ -166,7 +166,7 @@ strong {
 }
 
 .disclaimer-banner p {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     color: var(--color-warm-grey);
     margin: 0;
 }
@@ -307,15 +307,15 @@ strong {
 }
 
 .explainer-inline {
-    background: transparent;
+    background: var(--color-cream-dark);
     box-shadow: none;
-    border-radius: 0;
-    margin-top: 0.25rem;
-    margin-bottom: 0.25rem;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+    margin-bottom: 0;
 }
 
 .explainer-inline summary {
-    padding: 0.4rem 0;
+    padding: 0.75rem 1rem;
     font-size: 0.85rem;
     font-weight: 500;
     color: var(--color-warm-grey);
@@ -326,8 +326,12 @@ strong {
     color: var(--color-rust);
 }
 
+.explainer-inline summary::after {
+    font-size: 1.1rem;
+}
+
 .explainer-inline .explainer-content {
-    padding: 0 0 0.5rem;
+    padding: 0 1rem 0.75rem;
 }
 
 .explainer-inline .explainer-content p {
